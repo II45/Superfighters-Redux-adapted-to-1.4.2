@@ -1,11 +1,11 @@
 <p align="center"><img src="docs/Logo.gif" alt="Logo"/></p>
 
 > [!CAUTION]
-> This is an ***unofficial*** port of Superfighters Redux to Superfighters Deluxe `v.1.4.1b`.
+> This is an ***unofficial*** port of Superfighters Redux to Superfighters Deluxe `v.1.4.2`.
 > 
 > The Superfighters Redux build used is the latest of SFR's repository, `v.1.0.5_dev`, and it is still in development. Due to both this, and the porting process you may experience crashes or unintended game behavior.
 >
-> Do ***not*** let this be your first experience of Superfighters Redux, I highly recommend playing the original build for SFD `v.1.3.7d`. You can get SFD `v.1.3.7d` through Steam betas.
+> Do ***not*** let this be your first experience of Superfighters Redux, I highly recommend playing the original build for SFD `v.1.4.2`
 
 > [!IMPORTANT]
 > This mod is still a work-in-progress. Features may break, be added, removed, or changed entirely.
