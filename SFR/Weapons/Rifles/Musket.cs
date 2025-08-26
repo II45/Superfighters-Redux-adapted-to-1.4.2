@@ -12,7 +12,7 @@ internal sealed class Musket : RWeapon
 {
     internal Musket()
     {
-        RWeaponProperties weaponProperties = new(98, "Musket", "WpnMusket", false, WeaponCategory.Primary)
+        RWeaponProperties weaponProperties = new(98, LanguageHelper.GetText("weapon.Rifles.Musket") , "WpnMusket", false, WeaponCategory.Primary)
         {
             MaxMagsInWeapon = 1,
             MaxRoundsInMag = 1,
@@ -43,7 +43,7 @@ internal sealed class Musket : RWeapon
                 "ItemDebrisShiny00"
             ],
             SpecialAmmoBulletsRefill = 8,
-            VisualText = "Musket"
+            VisualText = LanguageHelper.GetText("weapon.Rifles.Musket")
         };
 
         RWeaponVisuals weaponVisuals = new()

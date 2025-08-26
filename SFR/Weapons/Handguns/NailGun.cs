@@ -9,7 +9,7 @@ internal sealed class NailGun : RWeapon
 {
     internal NailGun()
     {
-        RWeaponProperties weaponProperties = new(70, "Nailgun", 1, 18, 4, 2, -1, 150, 0, 1, 70, string.Empty, 0.13f, new(8f, -2f), string.Empty, "OutOfAmmoLight", "PistolDraw", "PistolReload", "OutOfAmmoHeavy", "WpnNailgun", false, WeaponCategory.Secondary)
+        RWeaponProperties weaponProperties = new(70, LanguageHelper.GetText("weapon.Handguns.Nailgun"), 1, 18, 4, 2, -1, 150, 0, 1, 70, string.Empty, 0.13f, new(8f, -2f), string.Empty, "OutOfAmmoLight", "PistolDraw", "PistolReload", "OutOfAmmoHeavy", "WpnNailgun", false, WeaponCategory.Secondary)
         {
             SpecialAmmoBulletsRefill = 18,
             LazerPosition = new(7f, -0.5f),
@@ -17,7 +17,7 @@ internal sealed class NailGun : RWeapon
             AimStartSoundID = "PistolAim",
             BreakDebris = ["ItemDebrisDark00", "ItemDebrisDark01"],
             AI_DamageOutput = DamageOutputType.High,
-            VisualText = "Nailgun"
+            VisualText = LanguageHelper.GetText("weapon.Handguns.Nailgun")
         };
 
         RWeaponVisuals weaponVisuals = new()

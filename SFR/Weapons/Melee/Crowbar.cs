@@ -12,7 +12,7 @@ internal sealed class Crowbar : MWeapon
 {
     internal Crowbar()
     {
-        MWeaponProperties weaponProperties = new(76, "Crowbar", 9.5f, 10f, "MeleeSlash", "MeleeHitBlunt", "HIT_S", "MeleeBlock", "HIT", "MeleeDraw", "WpnCrowbar", true, WeaponCategory.Melee, false)
+        MWeaponProperties weaponProperties = new(76, LanguageHelper.GetText("weapon.melee.Crowbar"), 9.5f, 10f, "MeleeSlash", "MeleeHitBlunt", "HIT_S", "MeleeBlock", "HIT", "MeleeDraw", "WpnCrowbar", true, WeaponCategory.Melee, false)
         {
             MeleeWeaponType = MeleeWeaponTypeEnum.TwoHanded,
             WeaponMaterial = MaterialDatabase.Get("metal"),
@@ -35,7 +35,7 @@ internal sealed class Crowbar : MWeapon
                 DurabilityLoss = 4f
             },
             BreakDebris = ["MetalDebris00A", "CrowbarDebris1"],
-            VisualText = "Crowbar"
+            VisualText = LanguageHelper.GetText("weapon.melee.Crowbar")
         };
 
         MWeaponVisuals weaponVisuals = new()

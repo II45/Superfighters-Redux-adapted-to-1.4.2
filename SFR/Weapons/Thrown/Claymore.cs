@@ -8,13 +8,13 @@ internal sealed class Claymore : TWeapon
 {
     internal Claymore()
     {
-        TWeaponProperties weaponProperties = new(87, "Claymore", "WpnClaymore", false, WeaponCategory.Supply)
+        TWeaponProperties weaponProperties = new(87, LanguageHelper.GetText("weapon.Thrown.Claymore"), "WpnClaymore", false, WeaponCategory.Supply)
         {
             MaxCarriedTotalThrowables = 4,
             NumberOfThrowables = 2,
             ThrowObjectID = "WpnClaymoreThrown",
             DrawSoundID = "GrenadeDraw",
-            VisualText = "Claymore"
+            VisualText = LanguageHelper.GetText("weapon.Thrown.Claymore")
         };
 
         TWeaponVisuals weaponVisuals = new()

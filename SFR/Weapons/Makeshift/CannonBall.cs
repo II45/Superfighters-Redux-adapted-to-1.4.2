@@ -13,7 +13,7 @@ internal sealed class CannonBall : MWeapon
 {
     internal CannonBall()
     {
-        MWeaponProperties weaponProperties = new(73, "Cannonball", 6f, 14f, "MeleeSwing", "MeleeHitBlunt", "HIT_B", "MeleeBlock", "HIT", "MeleeDraw", "CannonBall00", false, WeaponCategory.Melee, true)
+        MWeaponProperties weaponProperties = new(73, LanguageHelper.GetText("weapon.makeshife.Cannonball"), 6f, 14f, "MeleeSwing", "MeleeHitBlunt", "HIT_B", "MeleeBlock", "HIT", "MeleeDraw", "CannonBall00", false, WeaponCategory.Melee, true)
         {
             MeleeWeaponType = MeleeWeaponTypeEnum.TwoHanded,
             WeaponMaterial = MaterialDatabase.Get("stone"),
@@ -32,7 +32,7 @@ internal sealed class CannonBall : MWeapon
                 DeflectType = DeflectBulletType.Absorb,
                 DurabilityLoss = 70f
             },
-            VisualText = "Cannonball"
+            VisualText = LanguageHelper.GetText("weapon.makeshife.Cannonball")
         };
 
         MWeaponVisuals weaponVisuals = new()

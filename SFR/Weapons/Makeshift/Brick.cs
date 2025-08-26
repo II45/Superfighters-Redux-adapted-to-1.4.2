@@ -13,7 +13,7 @@ internal sealed class Brick : MWeapon
 {
     internal Brick()
     {
-        MWeaponProperties weaponProperties = new(71, "Brick", 6f, 14f, "MeleeSwing", "MeleeHitBlunt", "HIT_B", "MeleeBlock", "HIT", "MeleeDraw", "Brick00", false, WeaponCategory.Melee, true)
+        MWeaponProperties weaponProperties = new(71, LanguageHelper.GetText("weapon.makeshife.Brick"), 6f, 14f, "MeleeSwing", "MeleeHitBlunt", "HIT_B", "MeleeBlock", "HIT", "MeleeDraw", "Brick00", false, WeaponCategory.Melee, true)
         {
             MeleeWeaponType = MeleeWeaponTypeEnum.TwoHanded,
             WeaponMaterial = MaterialDatabase.Get("stone"),
@@ -32,7 +32,7 @@ internal sealed class Brick : MWeapon
                 DeflectType = DeflectBulletType.Absorb,
                 DurabilityLoss = 70f
             },
-            VisualText = "Brick"
+            VisualText = LanguageHelper.GetText("weapon.makeshife.Brick")
         };
 
         MWeaponVisuals weaponVisuals = new()

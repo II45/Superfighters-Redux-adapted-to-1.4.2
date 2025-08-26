@@ -11,6 +11,7 @@ using SFR.Misc;
 using SFR.Objects;
 using SFR.Sync.Generic;
 using SFR.Weapons;
+using System;
 using Player = SFD.Player;
 using Vector2 = Microsoft.Xna.Framework.Vector2;
 using WeaponItemType = SFD.Weapons.WeaponItemType;
@@ -46,6 +47,48 @@ internal static class GoreHandler
                 _ = __instance.GameWorld.CreateTile(spawnObjectInformation);
             }
         }
+    }
+
+    [HarmonyPrefix]
+    [HarmonyPatch(typeof(StreetsweeperGun), nameof(StreetsweeperGun.Shoot))]
+    private static bool ShootExtra(StreetsweeperGun __instance)
+    {
+
+        Microsoft.Xna.Framework.Vector2 barrelPosition = __instance.GetBarrelPosition();
+        if (__instance.HasUndestructableGunObstacles())
+        {
+            return true;
+        }
+        EffectHandler.PlayEffect("MZLED", barrelPosition, __instance.Owner.GameWorld, new object[]
+        {
+        __instance.Owner.ObjectID,
+        __instance.m_muzzleFlashID
+        });
+        SoundHandler.PlaySound("SMG", barrelPosition, __instance.Owner.GameWorld);
+        Microsoft.Xna.Framework.Vector2 direction = __instance.Direction;
+        SFDMath.RotatePosition(ref direction, (SFD.Constants.RANDOM.NextFloat() - 0.5f) * 0.15f, out direction);
+        ProjectilePowerup powerup = new();
+        Random random = new();
+        int a = random.Next(1, 3);
+        switch (a)
+        {
+            case 1:
+                powerup = ProjectilePowerup.Fire;
+                break;
+            case 2:
+                powerup = ProjectilePowerup.Bouncing;
+                break;
+        }
+
+
+        Projectile projectile = __instance.Owner.GameWorld.SpawnProjectile(40, barrelPosition, direction, __instance.Owner.ObjectID, powerup);
+        if (projectile != null)
+        {
+            projectile.CheckTunneling = true;
+            projectile.TunnelingPosition = __instance.GetTunnelingCheckPosition();
+        }
+        __instance.Owner.Body.ApplyForce(-__instance.Direction * 0.4f, Microsoft.Xna.Framework.Vector2.Zero);
+        return false;
     }
 
     /// <summary>

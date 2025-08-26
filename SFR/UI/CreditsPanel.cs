@@ -2,35 +2,36 @@
 using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
+using SFD;
 using SFD.MenuControls;
 
 namespace SFR.UI;
 
 internal sealed class CreditsPanel : Panel
 {
-    internal CreditsPanel() : base("CREDITS", 360, 420)
+    internal CreditsPanel() : base(LanguageHelper.GetText("UI.credit.CREDITS"), 360, 420)
     {
         List<MenuItem> items =
         [
-            new MenuItemSeparator("MISC"),
+            new MenuItemSeparator(LanguageHelper.GetText("UI.credit.MISC")),
             new MenuItemLabel("Project Repo", Align.Center, Color.BlueViolet, _ => Process.Start("https://github.com/Odex64/SFR")),
             new MenuItemLabel("Discord", Align.Center, Color.BlueViolet, _ => Process.Start("https://discord.gg/CqYZfazH6M")),
 
-            new MenuItemSeparator("PROGRAMMERS"),
+            new MenuItemSeparator(LanguageHelper.GetText("UI.credit.PROGRAMMERS")),
             new MenuItemLabel("Odex64", Align.Center, Color.Orange),
             new MenuItemLabel("Argón", Align.Center, Color.Orange),
 
-            new MenuItemSeparator("ARTISTS"),
+            new MenuItemSeparator(LanguageHelper.GetText("UI.credit.ARTISTS")),
             new MenuItemLabel("Shock", Align.Center, Color.Lime),
             new MenuItemLabel("Dxse", Align.Center, Color.Lime),
             new MenuItemLabel("KLI", Align.Center, Color.Lime),
             new MenuItemLabel("Danila015", Align.Center, Color.Lime),
             new MenuItemLabel("Eiga", Align.Center, Color.Lime),
 
-            new MenuItemSeparator("COMPOSERS"),
+            new MenuItemSeparator(LanguageHelper.GetText("UI.credit.COMPOSERS")),
             new MenuItemLabel("Samwow", Align.Center, Color.Red),
 
-            new MenuItemSeparator("SPECIAL THANKS"),
+            new MenuItemSeparator(LanguageHelper.GetText("UI.credit.SPECIALTHANKS")),
             new MenuItemLabel("Odex64 - Founder & Project Leader", Align.Center, Color.Gold),
             new MenuItemLabel("Eiga, Heapons, Olv - Moderation", Align.Center, Color.Gold),
             new MenuItemLabel("Mimyuu - For the special font ", Align.Center, Color.Gold),

@@ -193,6 +193,9 @@ internal static class AnimHandler
                 case AdrenalineBoost adrenalineBoost:
                     adrenalineBoost.OnEffectStart(player);
                     break;
+                case FusionElixirBoost FusionElixirBoost:
+                    FusionElixirBoost.OnEffectStart(player);
+                    break;
             }
         }
 

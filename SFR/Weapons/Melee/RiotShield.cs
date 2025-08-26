@@ -12,7 +12,7 @@ internal sealed class RiotShield : MWeapon
 {
     internal RiotShield()
     {
-        MWeaponProperties weaponProperties = new(82, "RiotShield", 15f, 22f, "MeleeSwing", "MeleeHitBlunt", "HIT_B", "MeleeBlock", "HIT", "MeleeDraw", "WpnRiotShield", true, WeaponCategory.Melee, false)
+        MWeaponProperties weaponProperties = new(82, LanguageHelper.GetText("weapon.melee.RiotShield"), 8.5f, 12f, "MeleeSwing", "MeleeHitBlunt", "HIT_B", "MeleeBlock", "HIT", "MeleeDraw", "WpnRiotShield", true, WeaponCategory.Melee, false)
         {
             MeleeWeaponType = MeleeWeaponTypeEnum.TwoHanded,
             Handling = MeleeHandlingType.Custom,
@@ -34,7 +34,7 @@ internal sealed class RiotShield : MWeapon
             },
             BreakDebris = ["MetalDebris00A", "RiotShieldDebris1"],
             AI_DamageOutput = DamageOutputType.High,
-            VisualText = "Riot Shield"
+            VisualText = LanguageHelper.GetText("weapon.melee.RiotShield")
         };
 
         MWeaponVisuals weaponVisuals = new()

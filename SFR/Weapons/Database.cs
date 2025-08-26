@@ -23,7 +23,7 @@ internal static class Database
     [HarmonyPatch(typeof(WeaponDatabase), nameof(WeaponDatabase.Load))]
     private static void LoadWeapons()
     {
-        WeaponDatabase.m_weapons = new WeaponItem[110];
+        WeaponDatabase.m_weapons = new WeaponItem[122];
 
         Weapons ??=
         [
@@ -45,6 +45,8 @@ internal static class Database
             new(WeaponItemType.Melee, new Sledgehammer()), // 83
             new(WeaponItemType.Melee, new Switchblade()), // 84
             new(WeaponItemType.Melee, new Scythe()), // 108
+            new(WeaponItemType.Melee, new Vampireknife()), //114
+            new(WeaponItemType.Melee, new CodeBat()), //118
 
             // Handgun
             new(WeaponItemType.Handgun, new Flintlock()), // 69
@@ -52,6 +54,8 @@ internal static class Database
             new(WeaponItemType.Handgun, new UnkemptHarold()), // 85
             new(WeaponItemType.Handgun, new StickyLauncher()), // 86
             new(WeaponItemType.Handgun, new Anaconda()), // 109
+            new(WeaponItemType.Handgun, new Atomicgun()),//120
+            new(WeaponItemType.Handgun, new IceGun()),//121
 
             // Throwable
             new(WeaponItemType.Thrown, new Claymore()), // 87
@@ -72,13 +76,20 @@ internal static class Database
             new(WeaponItemType.Rifle, new Winchester()), // 101
             new(WeaponItemType.Rifle, new Minigun()), // 102
             new(WeaponItemType.Rifle, new AK47()), // 107
+            new(WeaponItemType.Rifle, new CrossbowBoom()), // 110
+            new(WeaponItemType.Rifle, new electromagnetic_guns()), // 111
+            new(WeaponItemType.Rifle, new ShotBow()), // 115
+            new(WeaponItemType.Rifle, new SplitGun()), //117
+            new(WeaponItemType.Rifle, new PulseSniperRifle()), //119
 
             // Pickup
             new(WeaponItemType.Powerup, new HealthPouch()), // 92
             new(WeaponItemType.Powerup, new AdrenalineBoost()), // 103
+            new(WeaponItemType.Powerup, new FusionElixirBoost()), // 116
             new(WeaponItemType.InstantPickup, new Jetpack()), // 104
             new(WeaponItemType.InstantPickup, new JetpackEditor()), // 105
-            new(WeaponItemType.InstantPickup, new Gunpack()) // 106
+            new(WeaponItemType.InstantPickup, new Gunpack()), // 106
+            new(WeaponItemType.InstantPickup, new RAmmo()), // 113
         ];
 
         foreach (var weapon in Weapons)
@@ -182,15 +193,15 @@ internal static class Database
             { 79, 8 }, //ParryingDagger
             { 80, 8 }, // Poleaxe
             { 81, 15 }, // Rapier
-            { 82, 16 }, // RiotShield,
+            { 82, 12 }, // RiotShield,
             { 83, 16 }, // Sledgehammer
             { 84, 18 }, // Switchblade
-            // { 85, 4 }, // UnkemptHarold
+             { 85, 4 }, // UnkemptHarold
             { 86, 9 }, // StickyLauncher
             { 87, 15 }, // Claymore
             { 88, 16 }, // Frag grenade
             { 89, 12 }, // Impact grenade
-            // { 90, 1 }, // Snowball
+            { 90, 1 }, // Snowball
             { 91, 11 }, // Sticky bomb
             { 92, 22 }, // Health pouch
             { 93, 12 }, // AA12
@@ -205,11 +216,23 @@ internal static class Database
             { 102, 6 }, // Minigun
             { 103, 12 }, // Adrenaline boost
             { 104, 17 }, // Jetpack
-            // 105, Jetpack editor
-            {106, 11 }, // Gunpack
+                         // 105, Jetpack editor
+            { 106, 10 },   // 106，Gunpack
             { 107, 12 }, // AK47
             { 108, 10 }, // Scythe
-            { 109, 12 } // Anaconda
+            { 109, 12 }, // Anaconda
+            { 110, 7 },// 爆炸弩
+            { 111, 5 }, // 电磁炮
+           // { 112, 0 },//代码武器
+            { 113, 13 },//融合子弹
+            { 114, 10 },//吸血刀
+            { 115, 6 }, //风暴之弓
+            { 116, 12 },//混合药剂
+            { 117, 12 },//分裂
+            { 118, 0 },//代码棍子
+            { 119, 8 }, //充能狙击枪
+            { 120, 13}, //原子能枪
+            { 121, 10 } //冰冻枪
         };
 
         __result = WeaponItem.ID.m_wpns;
@@ -325,6 +348,6 @@ internal static class Database
         Anaconda,
         Jetpack,
         JetpackEditor,
-        Gunpack
+
     }
 }

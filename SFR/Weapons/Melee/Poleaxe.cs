@@ -12,7 +12,7 @@ internal sealed class Poleaxe : MWeapon, ISharpMelee
 {
     internal Poleaxe()
     {
-        MWeaponProperties weaponProperties = new(80, "Poleaxe", 14f, 16f, "MeleeSlash", "MeleeHitSharp", "HIT_S", "MeleeBlock", "HIT", "KatanaDraw", "WpnPoleaxe", true, WeaponCategory.Melee, false)
+        MWeaponProperties weaponProperties = new(80, LanguageHelper.GetText("weapon.melee.Poleaxe"), 14f, 16f, "MeleeSlash", "MeleeHitSharp", "HIT_S", "MeleeBlock", "HIT", "KatanaDraw", "WpnPoleaxe", true, WeaponCategory.Melee, false)
         {
             MeleeWeaponType = MeleeWeaponTypeEnum.TwoHanded,
             Handling = MeleeHandlingType.Custom,
@@ -35,7 +35,7 @@ internal sealed class Poleaxe : MWeapon, ISharpMelee
             },
             BreakDebris = ["MetalDebris00A", "PoleaxeDebris1", "PoleaxeDebris2"],
             AI_DamageOutput = DamageOutputType.High,
-            VisualText = "Poleaxe"
+            VisualText = LanguageHelper.GetText("weapon.melee.Poleaxe")
         };
 
         MWeaponVisuals weaponVisuals = new()

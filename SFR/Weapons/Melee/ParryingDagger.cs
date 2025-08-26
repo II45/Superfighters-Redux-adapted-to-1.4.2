@@ -12,7 +12,7 @@ internal sealed class ParryingDagger : MWeapon
 {
     internal ParryingDagger()
     {
-        MWeaponProperties weaponProperties = new(79, "Parrying_Dagger", 10f, 9f, "MeleeSlash", "MeleeHitSharp", "HIT_S", "MeleeBlock", "HIT", "MeleeDrawMetal", "WpnParryingDagger", true, WeaponCategory.Melee, false)
+        MWeaponProperties weaponProperties = new(79, LanguageHelper.GetText("weapon.melee.ParryingDagger"), 10f, 9f, "MeleeSlash", "MeleeHitSharp", "HIT_S", "MeleeBlock", "HIT", "MeleeDrawMetal", "WpnParryingDagger", true, WeaponCategory.Melee, false)
         {
             MeleeWeaponType = MeleeWeaponTypeEnum.OneHanded,
             WeaponMaterial = MaterialDatabase.Get("metal"),
@@ -33,7 +33,7 @@ internal sealed class ParryingDagger : MWeapon
             },
             BreakDebris = ["MetalDebris00A", "ParryingdaggerDebris1"],
             AI_DamageOutput = DamageOutputType.Low,
-            VisualText = "Parrying Dagger"
+            VisualText = LanguageHelper.GetText("weapon.melee.ParryingDagger")
         };
 
         MWeaponVisuals weaponVisuals = new()

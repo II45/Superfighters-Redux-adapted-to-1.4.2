@@ -11,7 +11,7 @@ internal sealed class Flintlock : RWeapon
 {
     internal Flintlock()
     {
-        RWeaponProperties weaponProperties = new(69, "Flintlock", 1, 1, 6, 3, 1000, 1000, 0, 1, 69, string.Empty, 0.2f, new(12f, -2f), "MuzzleFlashShotgun", "SawedOff", "MagnumDraw", "MagnumReload", "OutOfAmmoHeavy", "WpnFlintlock", false, WeaponCategory.Secondary)
+        RWeaponProperties weaponProperties = new(69, LanguageHelper.GetText("weapon.Handguns.Flintlock"), 1, 1, 6, 3, 1000, 1000, 0, 1, 69, string.Empty, 0.2f, new(12f, -2f), "MuzzleFlashShotgun", "SawedOff", "MagnumDraw", "MagnumReload", "OutOfAmmoHeavy", "WpnFlintlock", false, WeaponCategory.Secondary)
         {
             CooldownAfterPostAction = 1000,
             CursorAimOffset = new(0f, 1f),
@@ -20,7 +20,7 @@ internal sealed class Flintlock : RWeapon
             AI_DamageOutput = DamageOutputType.High,
             BreakDebris = ["MetalDebris00A"],
             SpecialAmmoBulletsRefill = 3,
-            VisualText = "Flintlock"
+            VisualText = LanguageHelper.GetText("weapon.Handguns.Flintlock")
         };
 
         RWeaponVisuals weaponVisuals = new()

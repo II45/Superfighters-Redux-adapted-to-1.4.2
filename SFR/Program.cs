@@ -5,6 +5,7 @@ using System.IO.Compression;
 using System.Linq;
 using System.Net;
 using System.Reflection;
+using System.Threading;
 // using DiscordRPC;
 using HarmonyLib;
 using SFR.Helper;
@@ -60,7 +61,7 @@ internal static class Program
 
         if (!args.Contains("-SFR", StringComparer.OrdinalIgnoreCase))
         {
-            Logger.LogWarn("Start SFR or SFD: \n1. SFR\n2. SFD", false, false);
+            Logger.LogWarn("Start SFR or SFD: \n1. SFR\n2. SFD\n3. SFDCT\n4. SFR Server", false, false);
             Console.SetCursorPosition("Start SFD or SFD: ".Length, Console.CursorTop - 3);
             var key = Console.ReadKey().Key;
             Console.SetCursorPosition(0, Console.CursorTop + 4);
@@ -70,6 +71,48 @@ internal static class Program
                 if (!File.Exists(gameFile))
                 {
                     Logger.LogError("Superfighters Deluxe.exe not found!");
+                    return -1;
+                }
+
+                Process.Start(gameFile, string.Join(" ", args));
+                return 0;
+            }
+            if (key is ConsoleKey.D3 or ConsoleKey.NumPad3)
+            {
+                string gameFile = Path.Combine(GameDirectory, "SFDCT.exe");
+                if (!File.Exists(gameFile))
+                {
+                    Logger.LogError("SFDCT.exe not found!");
+                    return -1;
+                }
+
+                Process.Start(gameFile, string.Join(" ", args));
+                return 0;
+            }
+            if (key is ConsoleKey.D4 or ConsoleKey.NumPad4)
+            {
+                Logger.LogWarn("输入人数,必须在8-32之间不然会报错", false, false);
+                string i = Console.ReadLine();
+                int a = Convert.ToInt32(i);
+                if (a >= 8 && a <= 32)
+                {
+                    //  int b = System.Math.Abs(i);
+                    //string Num = b.ToString();
+                    Process.Start("SFR.exe", " -sfr -skip -server -slots" + " " + i + " -open");
+                    Process.Start("SFR.exe", " -sfr -skip");
+                    return 0;
+                }
+                else Logger.LogWarn("人数必须在8-32之间", false, false);
+                Logger.LogWarn("3秒后自动关闭", false, false);
+                Thread.Sleep(3000);
+                return -1;
+            }
+            if (key is ConsoleKey.D5 or ConsoleKey.NumPad5)
+            {
+                string gameFile = Path.Combine("E:\\steam\\steamapps\\common\\Rain World", "RainWorld.exe");
+                if (!File.Exists(gameFile))
+                {
+                    Logger.LogError("RainWorld.exe not found!");
                     return -1;
                 }
 

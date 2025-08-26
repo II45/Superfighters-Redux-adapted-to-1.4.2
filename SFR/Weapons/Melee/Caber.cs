@@ -24,7 +24,7 @@ internal sealed class Caber : MWeapon, IExtendedWeapon
 
     internal Caber()
     {
-        MWeaponProperties weaponProperties = new(75, "Caber", 7.5f, 1f, "MeleeSwing", "MeleeHitBlunt", "HIT_B", "MeleeBlock", "HIT", "MeleeDraw", "WpnCaber", false, WeaponCategory.Melee, false)
+        MWeaponProperties weaponProperties = new(75, LanguageHelper.GetText("weapon.melee.Caber"), 7.5f, 1f, "MeleeSwing", "MeleeHitBlunt", "HIT_B", "MeleeBlock", "HIT", "MeleeDraw", "WpnCaber", false, WeaponCategory.Melee, false)
         {
             MeleeWeaponType = MeleeWeaponTypeEnum.TwoHanded,
             WeaponMaterial = MaterialDatabase.Get("metal"),
@@ -49,7 +49,7 @@ internal sealed class Caber : MWeapon, IExtendedWeapon
                 "CaberDebris2"
             ],
             AI_DamageOutput = DamageOutputType.High,
-            VisualText = "Caber"
+            VisualText = LanguageHelper.GetText("weapon.melee.Caber")
         };
 
         MWeaponVisuals weaponVisuals = new()

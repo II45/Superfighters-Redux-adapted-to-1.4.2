@@ -13,7 +13,7 @@ internal sealed class Broom : MWeapon
 {
     internal Broom()
     {
-        MWeaponProperties weaponProperties = new(72, "Broom", 13f, 17f, "MeleeSwing", "MeleeHitBlunt", "HIT_B", "MeleeBlock", "HIT", "MeleeDraw", "Broom00", false, WeaponCategory.Melee, true)
+        MWeaponProperties weaponProperties = new(72, LanguageHelper.GetText("weapon.makeshife.Broom"), 13f, 17f, "MeleeSwing", "MeleeHitBlunt", "HIT_B", "MeleeBlock", "HIT", "MeleeDraw", "Broom00", false, WeaponCategory.Melee, true)
         {
             MeleeWeaponType = MeleeWeaponTypeEnum.TwoHanded,
             WeaponMaterial = MaterialDatabase.Get("wood"),
@@ -33,7 +33,7 @@ internal sealed class Broom : MWeapon
                 DurabilityLoss = 70f
             },
             BreakDebris = ["CueStick00Debris"],
-            VisualText = "Broom"
+            VisualText = LanguageHelper.GetText("weapon.makeshife.Broom")
         };
 
         MWeaponVisuals weaponVisuals = new()

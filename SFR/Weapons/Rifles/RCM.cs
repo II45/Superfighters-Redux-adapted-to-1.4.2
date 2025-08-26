@@ -10,7 +10,7 @@ internal sealed class RCM : RWeapon
 {
     internal RCM()
     {
-        RWeaponProperties weaponProperties = new(100, "RCM", "WpnRCM", false, WeaponCategory.Primary)
+        RWeaponProperties weaponProperties = new(100, LanguageHelper.GetText("weapon.Rifles.RCM"), "WpnRCM", false, WeaponCategory.Primary)
         {
             MaxMagsInWeapon = 1,
             MaxRoundsInMag = 1,
@@ -44,7 +44,7 @@ internal sealed class RCM : RWeapon
                 "ItemDebrisBazooka00"
             ],
             SpecialAmmoBulletsRefill = 2,
-            VisualText = "RCM"
+            VisualText = LanguageHelper.GetText("weapon.Rifles.RCM")
         };
 
         RWeaponVisuals weaponVisuals = new()

@@ -12,14 +12,14 @@ internal sealed class ImpactGrenade : TWeapon
 {
     internal ImpactGrenade()
     {
-        TWeaponProperties weaponProperties = new(89, "Impact_Grenades", "WpnImpactGrenades", false, WeaponCategory.Supply)
+        TWeaponProperties weaponProperties = new(89, LanguageHelper.GetText("weapon.Thrown.Impact_Grenades"), "WpnImpactGrenades", false, WeaponCategory.Supply)
         {
             MaxCarriedTotalThrowables = 5,
             NumberOfThrowables = 2,
             ThrowObjectID = "WpnImpactGrenadesThrown",
             ThrowDeadlineTimer = 2550f,
             DrawSoundID = "GrenadeDraw",
-            VisualText = "Impact Grenades"
+            VisualText = LanguageHelper.GetText("weapon.Thrown.Impact_Grenades")
         };
 
         TWeaponVisuals weaponVisuals = new()

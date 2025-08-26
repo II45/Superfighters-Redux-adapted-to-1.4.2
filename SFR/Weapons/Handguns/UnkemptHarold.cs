@@ -10,7 +10,7 @@ internal sealed class UnkemptHarold : RWeapon
 
     internal UnkemptHarold()
     {
-        RWeaponProperties weaponProperties = new(85, "Unkempt_Harold", "WpnUnkemptHarold", false, WeaponCategory.Secondary)
+        RWeaponProperties weaponProperties = new(85, LanguageHelper.GetText("weapon.Handguns.Unkempt_Harold"), "WpnUnkemptHarold", false, WeaponCategory.Secondary)
         {
             MaxMagsInWeapon = 1,
             MaxRoundsInMag = 1,
@@ -35,7 +35,7 @@ internal sealed class UnkemptHarold : RWeapon
             AI_HasOneShotPotential = true,
             BreakDebris = ["ItemDebrisShiny01"],
             SpecialAmmoBulletsRefill = 18,
-            VisualText = "Unkempt Harold"
+            VisualText = LanguageHelper.GetText("weapon.Handguns.Unkempt_Harold")
         };
 
         RWeaponVisuals weaponVisuals = new()

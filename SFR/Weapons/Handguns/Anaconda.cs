@@ -12,7 +12,7 @@ internal sealed class Anaconda : RWeapon
 
     internal Anaconda()
     {
-        RWeaponProperties weaponProperties = new(109, "Anaconda", "WpnAnaconda", false, WeaponCategory.Secondary)
+        RWeaponProperties weaponProperties = new(109, LanguageHelper.GetText("weapon.Handguns.Anaconda"), "WpnAnaconda", false, WeaponCategory.Secondary)
         {
             MaxMagsInWeapon = 1,
             MaxRoundsInMag = 5,
@@ -36,7 +36,7 @@ internal sealed class Anaconda : RWeapon
             AI_DamageOutput = DamageOutputType.High,
             BreakDebris = [],
             SpecialAmmoBulletsRefill = 10,
-            VisualText = "Anaconda"
+            VisualText = LanguageHelper.GetText("weapon.Handguns.Anaconda")
         };
 
         RWeaponVisuals weaponVisuals = new()

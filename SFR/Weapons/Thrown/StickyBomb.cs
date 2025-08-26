@@ -12,14 +12,14 @@ internal sealed class StickyBomb : TWeapon
 {
     internal StickyBomb()
     {
-        TWeaponProperties weaponProperties = new(91, "Sticky_Bombs", "WpnStickyBomb", false, WeaponCategory.Supply)
+        TWeaponProperties weaponProperties = new(91, LanguageHelper.GetText("weapon.Thrown.Sticky_Bombs"), "WpnStickyBomb", false, WeaponCategory.Supply)
         {
             MaxCarriedTotalThrowables = 4,
             NumberOfThrowables = 2,
             ThrowObjectID = "WpnStickyBombThrown",
             ThrowDeadlineTimer = 2550f,
             DrawSoundID = "GrenadeDraw",
-            VisualText = "Sticky Bombs"
+            VisualText = LanguageHelper.GetText("weapon.Thrown.Sticky_Bombs")
         };
 
         TWeaponVisuals weaponVisuals = new()

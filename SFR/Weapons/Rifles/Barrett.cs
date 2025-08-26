@@ -13,7 +13,7 @@ internal sealed class Barrett : RWeapon
 
     internal Barrett()
     {
-        RWeaponProperties weaponProperties = new(94, "Anti-Materiel_Rifle", "WpnBarrett", false, WeaponCategory.Primary)
+        RWeaponProperties weaponProperties = new(94, LanguageHelper.GetText("weapon.Rifles.Barrett"), "WpnBarrett", false, WeaponCategory.Primary)
         {
             MaxMagsInWeapon = 1,
             MaxRoundsInMag = 1,
@@ -45,7 +45,7 @@ internal sealed class Barrett : RWeapon
                 "ItemDebrisShiny01"
             ],
             SpecialAmmoBulletsRefill = 3,
-            VisualText = "Anti-Materiel Rifle"
+            VisualText = LanguageHelper.GetText("weapon.Rifles.Barrett")// "Anti-Materiel Rifle"
         };
 
         RWeaponVisuals weaponVisuals = new()

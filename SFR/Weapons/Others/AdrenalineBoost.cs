@@ -11,11 +11,11 @@ internal class AdrenalineBoost : PItem
 {
     internal AdrenalineBoost()
     {
-        var itemProperties = new PItemProperties(103, "AdrenalineBoost", "ItemAdrenalineBoost", false, WeaponCategory.Supply)
+        var itemProperties = new PItemProperties(103, LanguageHelper.GetText("weapon.Others.AdrenalineBoost"), "ItemAdrenalineBoost", false, WeaponCategory.Supply)
         {
             PickupSoundID = "GetSlomo",
             ActivateSoundID = "",
-            VisualText = "Adrenaline Boost"
+            VisualText = LanguageHelper.GetText("weapon.Others.AdrenalineBoost")
         };
 
         var itemVisuals = new PItemVisuals(Textures.GetTexture("AdrenalineBoost"), Textures.GetTexture("AdrenalineBoostD"));

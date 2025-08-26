@@ -14,7 +14,7 @@ internal sealed class Greatsword : MWeapon, ISharpMelee
 
     internal Greatsword()
     {
-        MWeaponProperties weaponProperties = new(77, "Greatsword", 15f, 22f, "MeleeSlash", "MeleeHitSharp", "HIT_S", "MeleeBlock", "HIT", "KatanaDraw", "WpnGreatsword", true, WeaponCategory.Melee, false)
+        MWeaponProperties weaponProperties = new(77, LanguageHelper.GetText("weapon.melee.Greatsword"), 15f, 22f, "MeleeSlash", "MeleeHitSharp", "HIT_S", "MeleeBlock", "HIT", "KatanaDraw", "WpnGreatsword", true, WeaponCategory.Melee, false)
         {
             MeleeWeaponType = MeleeWeaponTypeEnum.TwoHanded,
             Handling = MeleeHandlingType.Custom,
@@ -36,7 +36,7 @@ internal sealed class Greatsword : MWeapon, ISharpMelee
             },
             BreakDebris = ["MetalDebris00A", "GreatswordDebris1"],
             AI_DamageOutput = DamageOutputType.High,
-            VisualText = "Greatsword"
+            VisualText = LanguageHelper.GetText("weapon.melee.Greatsword")
         };
 
         MWeaponVisuals weaponVisuals = new()

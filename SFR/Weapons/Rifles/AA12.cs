@@ -9,7 +9,7 @@ internal sealed class AA12 : RWeapon
 {
     internal AA12()
     {
-        RWeaponProperties weaponProperties = new(93, "AA12", 1, 8, 3, 2, -1, 300, 0, 5, 10, "ShellShotgun", 0.3f, new(12f, -2f), "MuzzleFlashShotgun", "SawedOff", "TommyGunDraw", "TommyGunReload", "OutOfAmmoHeavy", "WpnAA12", false, WeaponCategory.Primary)
+        RWeaponProperties weaponProperties = new(93, LanguageHelper.GetText("weapon.Rifles.AA12"), 1, 8, 3, 2, -1, 300, 0, 5, 10, "ShellShotgun", 0.3f, new(12f, -2f), "MuzzleFlashShotgun", "SawedOff", "TommyGunDraw", "TommyGunReload", "OutOfAmmoHeavy", "WpnAA12", false, WeaponCategory.Primary)
         {
             CursorAimOffset = new(0f, 1f),
             LazerPosition = new(14f, -0.5f),
@@ -21,7 +21,7 @@ internal sealed class AA12 : RWeapon
             ],
             SpecialAmmoBulletsRefill = 10,
             AI_DamageOutput = DamageOutputType.High,
-            VisualText = "AA12"
+            VisualText = LanguageHelper.GetText("weapon.Rifles.AA12")
         };
 
         RWeaponVisuals weaponVisuals = new()

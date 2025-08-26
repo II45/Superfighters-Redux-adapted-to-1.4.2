@@ -13,7 +13,7 @@ internal sealed class Winchester : RWeapon
 
     internal Winchester()
     {
-        RWeaponProperties weaponProperties = new(101, "Winchester", "WpnWinchester", false, WeaponCategory.Primary)
+        RWeaponProperties weaponProperties = new(101, LanguageHelper.GetText("weapon.Rifles.Winchester"), "WpnWinchester", false, WeaponCategory.Primary)
         {
             MaxMagsInWeapon = 7,
             MaxRoundsInMag = 1,
@@ -46,7 +46,7 @@ internal sealed class Winchester : RWeapon
             ],
             SpecialAmmoBulletsRefill = 14,
             AI_DamageOutput = DamageOutputType.Standard,
-            VisualText = "Winchester"
+            VisualText = LanguageHelper.GetText("weapon.Rifles.Winchester")
         };
 
         RWeaponVisuals weaponVisuals = new()

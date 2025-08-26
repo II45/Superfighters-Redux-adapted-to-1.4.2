@@ -18,7 +18,7 @@ internal sealed class Rapier : MWeapon
 
     internal Rapier()
     {
-        MWeaponProperties weaponProperties = new(81, "Rapier", 10.5f, 10.5f, "MeleeSlash", "MeleeHitSharp", "HIT_S", "MeleeBlock", "HIT", "KatanaDraw", "WpnRapier", false, WeaponCategory.Melee, false)
+        MWeaponProperties weaponProperties = new(81, LanguageHelper.GetText("weapon.melee.Rapier"), 10.5f, 10.5f, "MeleeSlash", "MeleeHitSharp", "HIT_S", "MeleeBlock", "HIT", "KatanaDraw", "WpnRapier", false, WeaponCategory.Melee, false)
         {
             Handling = MeleeHandlingType.Custom,
             MeleeWeaponType = MeleeWeaponTypeEnum.OneHanded,
@@ -39,7 +39,7 @@ internal sealed class Rapier : MWeapon
                 DurabilityLoss = 4f
             },
             BreakDebris = ["MetalDebris00A", "RapierDebris1"],
-            VisualText = "Rapier"
+            VisualText = LanguageHelper.GetText("weapon.melee.Rapier")
         };
 
         MWeaponVisuals weaponVisuals = new()

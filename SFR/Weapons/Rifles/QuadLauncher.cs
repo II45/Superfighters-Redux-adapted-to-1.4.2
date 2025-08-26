@@ -9,7 +9,7 @@ internal sealed class QuadLauncher : RWeapon
 {
     internal QuadLauncher()
     {
-        RWeaponProperties weaponProperties = new(99, "Quad_Launcher", "WpnQuadLauncher", false, WeaponCategory.Primary)
+        RWeaponProperties weaponProperties = new(99, LanguageHelper.GetText("weapon.Rifles.Quad_Launcher"), "WpnQuadLauncher", false, WeaponCategory.Primary)
         {
             MaxMagsInWeapon = 4,
             MaxRoundsInMag = 1,
@@ -42,7 +42,7 @@ internal sealed class QuadLauncher : RWeapon
                 "ItemDebrisBazooka00"
             ],
             SpecialAmmoBulletsRefill = 4,
-            VisualText = "Quad Launcher"
+            VisualText = LanguageHelper.GetText("weapon.Rifles.Quad_Launcher")
         };
 
         RWeaponVisuals weaponVisuals = new()

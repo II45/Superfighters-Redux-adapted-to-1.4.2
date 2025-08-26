@@ -19,7 +19,7 @@ internal sealed class StickyLauncher : RWeapon, IExtendedWeapon
 
     internal StickyLauncher()
     {
-        RWeaponProperties weaponProperties = new(86, "Sticky_Launcher", "WpnStickyLauncher", false, WeaponCategory.Secondary)
+        RWeaponProperties weaponProperties = new(86, LanguageHelper.GetText("weapon.Handguns.Sticky_Launcher"), "WpnStickyLauncher", false, WeaponCategory.Secondary)
         {
             MaxMagsInWeapon = 1,
             MaxRoundsInMag = 3,
@@ -45,7 +45,7 @@ internal sealed class StickyLauncher : RWeapon, IExtendedWeapon
             AI_MaxRange = 0f,
             BreakDebris = ["ItemDebrisWood00", "ItemDebrisShiny00", "MetalDebris00C"],
             SpecialAmmoBulletsRefill = 8,
-            VisualText = "Sticky Launcher"
+            VisualText = LanguageHelper.GetText("weapon.Handguns.Sticky_Launcher")
         };
 
         RWeaponVisuals weaponVisuals = new()

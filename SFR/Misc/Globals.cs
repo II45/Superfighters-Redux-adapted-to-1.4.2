@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -13,6 +14,7 @@ internal static class Globals
     internal static readonly Random Random = new();
     // internal static int? Slots = null;
     internal static readonly Color RageBoost = new(210, 130, 50);
+    internal static readonly Color Freeze = new(0, 255, 255);
     internal static bool QuickStart = false;
     internal static string DebugMap = string.Empty;
     // internal static readonly Color Team5 = new(112, 59, 168);
@@ -20,4 +22,5 @@ internal static class Globals
     // internal static Texture2D TeamIcon5;
     // internal static Texture2D TeamIcon6;
     internal static bool IsDev => SFRVersion.EndsWith("_dev");
+    public static string Language { get { return Path.Combine(Program.GameDirectory,"SFR", "Content", "Data","Misc", "Language"); } }
 }

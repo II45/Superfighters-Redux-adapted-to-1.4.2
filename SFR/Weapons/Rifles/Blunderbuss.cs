@@ -12,7 +12,7 @@ internal sealed class Blunderbuss : RWeapon
 {
     internal Blunderbuss()
     {
-        RWeaponProperties weaponProperties = new(95, "Blunderbuss", "WpnBlunderbuss", false, WeaponCategory.Primary)
+        RWeaponProperties weaponProperties = new(95, LanguageHelper.GetText("weapon.Rifles.Blunderbuss"), "WpnBlunderbuss", false, WeaponCategory.Primary)
         {
             MaxMagsInWeapon = 1,
             MaxRoundsInMag = 1,
@@ -38,7 +38,7 @@ internal sealed class Blunderbuss : RWeapon
             AI_GravityArcingEffect = 0.66f,
             BreakDebris = ["ItemDebrisStockWood00", "ItemDebrisWood00", "ItemDebrisShiny00"],
             SpecialAmmoBulletsRefill = 4,
-            VisualText = "Blunderbuss"
+            VisualText = LanguageHelper.GetText("weapon.Rifles.Blunderbuss")
         };
 
         RWeaponVisuals weaponVisuals = new()

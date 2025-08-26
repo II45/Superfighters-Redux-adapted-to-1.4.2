@@ -76,6 +76,7 @@ internal sealed class ProjectileNailGun : Projectile, IExtendedProjectile
     {
         if (GameOwner != GameOwnerEnum.Client)
         {
+            
             player.TakeProjectileDamage(this);
             var material = player.GetPlayerHitMaterial() ?? playerObjectData.Tile.Material;
             SoundHandler.PlaySound(material.Hit.Projectile.HitSound, GameWorld);

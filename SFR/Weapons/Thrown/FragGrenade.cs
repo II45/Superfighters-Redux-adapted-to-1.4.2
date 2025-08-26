@@ -12,14 +12,14 @@ internal sealed class FragGrenade : TWeapon
 {
     internal FragGrenade()
     {
-        TWeaponProperties weaponProperties = new(88, "Frag_Grenades", "WpnFragGrenades", false, WeaponCategory.Supply)
+        TWeaponProperties weaponProperties = new(88, LanguageHelper.GetText("weapon.Thrown.Frag_Grenades"), "WpnFragGrenades", false, WeaponCategory.Supply)
         {
             MaxCarriedTotalThrowables = 5,
             NumberOfThrowables = 3,
             ThrowObjectID = "WpnFragGrenadesThrown",
             ThrowDeadlineTimer = 2550f,
             DrawSoundID = "GrenadeDraw",
-            VisualText = "Frag Grenades"
+            VisualText = LanguageHelper.GetText("weapon.Thrown.Frag_Grenades")
         };
 
         TWeaponVisuals weaponVisuals = new()

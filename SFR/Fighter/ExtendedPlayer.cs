@@ -27,6 +27,12 @@ internal sealed class ExtendedPlayer : IEquatable<Player>, IEquatable<ExtendedPl
         set => Time.AdrenalineBoost = value ? TimeSequence.AdrenalineBoostTime : 0f;
     }
 
+    internal bool Ice
+    {
+        get => Time.Ice > 0f;
+        set => Time.Ice = value ? TimeSequence.icetime : 0f;
+    }
+
     public bool Equals(Player other) => other?.ObjectID == Player.ObjectID;
 
     internal void ApplyAdrenalineBoost()
@@ -52,6 +58,8 @@ internal sealed class ExtendedPlayer : IEquatable<Player>, IEquatable<ExtendedPl
     {
         internal const float AdrenalineBoostTime = 20000f;
         internal float AdrenalineBoost;
+        internal float Ice;
+        internal const float icetime = 950f;
     }
 
     public bool Equals(ExtendedPlayer other) => other?.Player.ObjectID == Player.ObjectID;

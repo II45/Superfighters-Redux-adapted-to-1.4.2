@@ -20,7 +20,7 @@ internal sealed class Minigun : RWeapon, IExtendedWeapon
 
     internal Minigun()
     {
-        RWeaponProperties weaponProperties = new(102, "Minigun", 1, 200, 0, 1, -1, 25, 0, 1, 102, "ShellSmall", 0.3f, new(15f, 1f), "MuzzleFlashL", "M60", "TommyGunDraw", "TommyGunReload", "OutOfAmmoHeavy", "WpnMinigun", false, WeaponCategory.Primary)
+        RWeaponProperties weaponProperties = new(102, LanguageHelper.GetText("weapon.Rifles.Minigun"), 1, 200, 0, 1, -1, 25, 0, 1, 102, "ShellSmall", 0.3f, new(15f, 1f), "MuzzleFlashL", "M60", "TommyGunDraw", "TommyGunReload", "OutOfAmmoHeavy", "WpnMinigun", false, WeaponCategory.Primary)
         {
             CursorAimOffset = new(0f, 1f),
             LazerPosition = new(14f, -0.5f),
@@ -34,7 +34,7 @@ internal sealed class Minigun : RWeapon, IExtendedWeapon
             AI_DamageOutput = DamageOutputType.High,
             AI_EffectiveRange = 80,
             AI_MaxRange = 200,
-            VisualText = "Minigun"
+            VisualText = LanguageHelper.GetText("weapon.Rifles.Minigun")
         };
 
         RWeaponVisuals weaponVisuals = new()

@@ -29,7 +29,7 @@ internal sealed class Sledgehammer : MWeapon, IExtendedWeapon
 
     internal Sledgehammer()
     {
-        MWeaponProperties weaponProperties = new(83, "Sledgehammer", 14f, 8f, "Sledgehammer", "MeleeHitBlunt", "HIT_B", "MeleeBlock", "HIT", "MeleeDraw", "WpnSledgehammer", false, WeaponCategory.Melee, false)
+        MWeaponProperties weaponProperties = new(83, LanguageHelper.GetText("weapon.melee.Sledgehammer"), 14f, 8f, "Sledgehammer", "MeleeHitBlunt", "HIT_B", "MeleeBlock", "HIT", "MeleeDraw", "WpnSledgehammer", false, WeaponCategory.Melee, false)
         {
             DamageObjects = 30f,
             MeleeWeaponType = MeleeWeaponTypeEnum.TwoHanded,
@@ -52,7 +52,7 @@ internal sealed class Sledgehammer : MWeapon, IExtendedWeapon
             },
             BreakDebris = ["SledgehammerDebris1", "WoodDebris00A"],
             AI_DamageOutput = DamageOutputType.Low,
-            VisualText = "Sledgehammer"
+            VisualText = LanguageHelper.GetText("weapon.melee.Sledgehammer")
         };
 
         MWeaponVisuals weaponVisuals = new()

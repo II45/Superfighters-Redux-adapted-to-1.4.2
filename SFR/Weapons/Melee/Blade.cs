@@ -12,7 +12,7 @@ internal sealed class Blade : MWeapon, ISharpMelee
 {
     internal Blade()
     {
-        MWeaponProperties weaponProperties = new(74, "Blade", 9.5f, 13f, "MeleeSlash", "MeleeHitSharp", "HIT_S", "MeleeBlock", "HIT", "KatanaDraw", "WpnBlade", true, WeaponCategory.Melee, false)
+        MWeaponProperties weaponProperties = new(74, LanguageHelper.GetText("weapon.melee.Blade"), 9.5f, 13f, "MeleeSlash", "MeleeHitSharp", "HIT_S", "MeleeBlock", "HIT", "KatanaDraw", "WpnBlade", true, WeaponCategory.Melee, false)
         {
             MeleeWeaponType = MeleeWeaponTypeEnum.TwoHanded,
             WeaponMaterial = MaterialDatabase.Get("metal"),
@@ -37,7 +37,7 @@ internal sealed class Blade : MWeapon, ISharpMelee
                 "BladeDebris1"
             ],
             AI_DamageOutput = DamageOutputType.Standard,
-            VisualText = "Blade"
+            VisualText = LanguageHelper.GetText("weapon.melee.Blade")
         };
 
         MWeaponVisuals weaponVisuals = new()

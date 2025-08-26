@@ -8,14 +8,14 @@ internal sealed class Snowball : TWeapon
 {
     internal Snowball()
     {
-        TWeaponProperties weaponProperties = new(90, "Snowball", "WpnSnowball", false, WeaponCategory.Supply)
+        TWeaponProperties weaponProperties = new(90, LanguageHelper.GetText("weapon.Thrown.Snowball"), "WpnSnowball", false, WeaponCategory.Supply)
         {
             MaxCarriedTotalThrowables = 8,
             NumberOfThrowables = 6,
             ThrowObjectID = "WpnSnowballThrown",
             ThrowDeadlineTimer = 2550f,
             DrawSoundID = "GrenadeDraw",
-            VisualText = "Snowball"
+            VisualText = LanguageHelper.GetText("weapon.Thrown.Snowball")
         };
 
         TWeaponVisuals weaponVisuals = new()

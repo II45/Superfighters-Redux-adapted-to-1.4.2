@@ -12,7 +12,7 @@ internal sealed class Morningstar : MWeapon
 {
     internal Morningstar()
     {
-        MWeaponProperties weaponProperties = new(78, "Morningstar", 14f, 15f, "ChainSwing", "MeleeHitBlunt", "HIT_B", "MeleeBlock", "HIT", "MeleeDraw", "WpnMorningstar", false, WeaponCategory.Melee, false)
+        MWeaponProperties weaponProperties = new(78, LanguageHelper.GetText("weapon.melee.Morningstar"), 14f, 15f, "ChainSwing", "MeleeHitBlunt", "HIT_B", "MeleeBlock", "HIT", "MeleeDraw", "WpnMorningstar", false, WeaponCategory.Melee, false)
         {
             MeleeWeaponType = MeleeWeaponTypeEnum.OneHanded,
             WeaponMaterial = MaterialDatabase.Get("metal"),
@@ -32,7 +32,7 @@ internal sealed class Morningstar : MWeapon
                 DurabilityLoss = 4f
             },
             AI_DamageOutput = DamageOutputType.High,
-            VisualText = "Morningstar"
+            VisualText = LanguageHelper.GetText("weapon.melee.Morningstar")
         };
 
         MWeaponVisuals weaponVisuals = new()

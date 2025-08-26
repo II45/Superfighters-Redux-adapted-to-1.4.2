@@ -10,7 +10,7 @@ internal sealed class DoubleBarrel : RWeapon
 
     internal DoubleBarrel()
     {
-        RWeaponProperties weaponProperties = new(97, "DoubleBarrel", 1, 1, 15, 4, 3000, 100, 200, 12, 97, string.Empty, 0.3f, new(11f, -2.5f), "MuzzleFlashShotgun", "SawedOff", "SawedOffDraw", "SawedOffReload", "OutOfAmmoHeavy", "WpnDoubleBarrel", false, WeaponCategory.Primary)
+        RWeaponProperties weaponProperties = new(97, LanguageHelper.GetText("weapon.Rifles.DoubleBarrel") , 1, 1, 15, 4, 3000, 100, 200, 12, 97, string.Empty, 0.3f, new(11f, -2.5f), "MuzzleFlashShotgun", "SawedOff", "SawedOffDraw", "SawedOffReload", "OutOfAmmoHeavy", "WpnDoubleBarrel", false, WeaponCategory.Primary)
         {
             CursorAimOffset = new(0f, 2.5f),
             ClearRoundsOnReloadStart = false,
@@ -22,7 +22,7 @@ internal sealed class DoubleBarrel : RWeapon
             BreakDebris = ["ItemDebrisWood00", "MetalDebris00C"],
             SpecialAmmoBulletsRefill = 4,
             AI_DamageOutput = DamageOutputType.High,
-            VisualText = "Double Barrel Shotgun"
+            VisualText = LanguageHelper.GetText("weapon.Rifles.DoubleBarrel") // "Double Barrel Shotgun"
         };
 
         RWeaponVisuals weaponVisuals = new()

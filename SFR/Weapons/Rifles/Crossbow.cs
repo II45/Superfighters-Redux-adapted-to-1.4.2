@@ -14,7 +14,7 @@ internal sealed class Crossbow : RWeapon
 
     internal Crossbow()
     {
-        RWeaponProperties weaponProperties = new(96, "Crossbow", 1, 1, 8, 8, -1, 1000, 200, 1, 96, string.Empty, 0.05f, new(1f, -0.5f), string.Empty, "BowShoot", "GrenadeDraw", "GrenadeDraw", "OutOfAmmoLight", "WpnCrossbow", false, WeaponCategory.Primary)
+        RWeaponProperties weaponProperties = new(96, LanguageHelper.GetText("weapon.Rifles.Crossbow") , 1, 1, 8, 8, -1, 1000, 200, 1, 96, string.Empty, 0.05f, new(1f, -0.5f), string.Empty, "BowShoot", "GrenadeDraw", "GrenadeDraw", "OutOfAmmoLight", "WpnCrossbow", false, WeaponCategory.Primary)
         {
             SpecialAmmoBulletsRefill = 8,
             AI_DamageOutput = DamageOutputType.High,
@@ -31,7 +31,7 @@ internal sealed class Crossbow : RWeapon
             MaxCarriedSpareMags = 8,
             StartMags = 8,
             MaxRoundsInMag = 1,
-            VisualText = "Crossbow"
+            VisualText = LanguageHelper.GetText("weapon.Rifles.Crossbow")
         };
 
         RWeaponVisuals weaponVisuals = new()
