@@ -2,6 +2,7 @@
 using SFD;
 using SFD.Objects;
 using SFD.Sounds;
+using Microsoft.Xna.Framework;
 using SFD.Weapons;
 
 namespace SFR.Weapons.Rifles;

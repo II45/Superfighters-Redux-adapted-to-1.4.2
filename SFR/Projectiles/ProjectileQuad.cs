@@ -11,7 +11,7 @@ namespace SFR.Projectiles;
 
 internal sealed class ProjectileQuad : ProjectileBazooka
 {
-    private const float _explosionValue = 60;
+    private const float _explosionValue = 40;
     private const float _maxRange = 600;
     private bool _dataReflected;
     private float _effectTimer;

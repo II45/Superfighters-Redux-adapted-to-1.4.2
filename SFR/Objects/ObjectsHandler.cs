@@ -136,6 +136,10 @@ internal static class ObjectsHandler
             case "CROSSBOWBOLT01":
                 __result = new ObjectCrossbowBolt(startParams);
                 return false;
+            case "CROSSBOWBOOMBOLT000":
+            case "CROSSBOWBOOMBOLT011":
+                __result = new ObjectCrossbowBoomBolt(startParams);
+                return false;
             case "STICKYBOMBDEBRIS1":
                 __result = new ObjectShell(startParams);
                 return false;

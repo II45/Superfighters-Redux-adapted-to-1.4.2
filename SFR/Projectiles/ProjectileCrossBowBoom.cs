@@ -129,9 +129,9 @@ internal sealed class ProjectileCrossBowBoom : Projectile, IExtendedProjectile
             }
             else
             {
-                var data = (ObjectCrossbowBoomBolt)ObjectData.CreateNew(new ObjectDataStartParams(GameWorld.IDCounter.NextID(), 0, 0, "CrossbowBoomBolt000", GameOwner));
-                GameWorld.CreateTile(new SpawnObjectInformation(data, Position, -GetAngle(), 1, objectData.LocalRenderLayer, objectData.GetLinearVelocity(), 0));
-                data.Timer = GameWorld.ElapsedTotalGameTime + 10000;
+                var data = (ObjectCrossbowBoomBolt)ObjectData.CreateNew(new(GameWorld.IDCounter.NextID(), 0, 0, "CrossbowBoomBolt000", GameOwner));
+                _ = GameWorld.CreateTile(new(data, Position, -GetAngle(), 1, objectData.LocalRenderLayer, objectData.GetLinearVelocity(), 0));
+                data.Timer = GameWorld.ElapsedTotalGameTime + 15000;
                 data.EnableUpdateObject();
                 data.FilterObjectId = objectData.BodyID;
                 if (objectData.IsStatic)
