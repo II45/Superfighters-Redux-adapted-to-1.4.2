@@ -9,7 +9,7 @@ internal sealed class AK47 : RWeapon
 {
     internal AK47()
     {
-        RWeaponProperties weaponProperties = new(107, LanguageHelper.GetText("weapon.Rifles.AK47"), 1, 18, 4, 2, -1, 95, 0, 1, 5, "ShellSmall", 0.15f, new(10f, -2f), "MuzzleFlashM", "TommyGun", "TommyGunDraw", "TommyGunReload", "OutOfAmmoHeavy", "WpnAK47", false, WeaponCategory.Primary)
+        RWeaponProperties weaponProperties = new(107, LanguageHelper.GetText("weapon.Rifles.AK47"), 1, 18, 4, 2, -1, 95, 0, 1, 5, "ShellSmall", 0.15f, new(10f, -2f), "MuzzleFlashM", "AK47", "TommyGunDraw", "TommyGunReload", "OutOfAmmoHeavy", "WpnAK47", false, WeaponCategory.Primary)
         {
             BurstRoundsToFire = 3,
             BurstCooldown = 70,

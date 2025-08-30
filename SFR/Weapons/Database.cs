@@ -23,7 +23,7 @@ internal static class Database
     [HarmonyPatch(typeof(WeaponDatabase), nameof(WeaponDatabase.Load))]
     private static void LoadWeapons()
     {
-        WeaponDatabase.m_weapons = new WeaponItem[122];
+        WeaponDatabase.m_weapons = new WeaponItem[123];
 
         Weapons ??=
         [
@@ -81,6 +81,7 @@ internal static class Database
             new(WeaponItemType.Rifle, new ShotBow()), // 115
             new(WeaponItemType.Rifle, new SplitGun()), //117
             new(WeaponItemType.Rifle, new PulseSniperRifle()), //119
+            new(WeaponItemType.Rifle, new MK20_SSR()), //122
 
             // Pickup
             new(WeaponItemType.Powerup, new HealthPouch()), // 92
@@ -232,7 +233,9 @@ internal static class Database
             { 118, 0 },//代码棍子
             { 119, 8 }, //充能狙击枪
             { 120, 13}, //原子能枪
-            { 121, 10 } //冰冻枪
+            { 121, 10 }, //冰冻枪
+            { 122, 12 } //SSR
+
         };
 
         __result = WeaponItem.ID.m_wpns;

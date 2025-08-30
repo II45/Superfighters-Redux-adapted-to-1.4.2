@@ -19,7 +19,6 @@ namespace SFR.Fighter;
 internal static class GadgetHandler
 {
     private static readonly Texture2D RAmmoIcon = Textures.GetTexture("RAmmoIcon");
-    private enum PowerupAmmoType {random};
     [HarmonyPrefix]
     [HarmonyPatch(typeof(PlayerHUD), nameof(PlayerHUD.DrawTeamIcon))]
     private static bool DrawHudTeamIcon(Player player, GameUser user, int x, int y, SpriteBatch spriteBatch, float elapsed)

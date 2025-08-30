@@ -119,7 +119,7 @@ internal sealed class Vampireknife : MWeapon, IExtendedWeapon
     {
             ownerPlayer.HealAmount(3);
         
-        if (ownerPlayer.Health.MaxValue >= 80)
+        if (ownerPlayer.Health.MaxValue >= 90)
         {
             ownerPlayer.Health.MaxValue -= 2;
         }

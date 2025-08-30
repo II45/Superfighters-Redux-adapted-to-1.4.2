@@ -178,6 +178,7 @@
     <Compile Include="Projectiles\ProjectileShotBow.cs" />
     <Compile Include="Projectiles\ProjectileSplit.cs" />
     <Compile Include="Projectiles\ProjectilesPulse.cs" />
+    <Compile Include="Projectiles\ProjectileSSR.cs" />
     <Compile Include="Projectiles\ProjectileUnkemptHarold.cs" />
     <Compile Include="Projectiles\ProjectileMusket.cs" />
     <Compile Include="Projectiles\ProjectileNailGun.cs" />
@@ -244,6 +245,7 @@
     <Compile Include="Weapons\Rifles\DoubleBarrel.cs" />
     <Compile Include="Weapons\Rifles\electromagnetic_guns.cs" />
     <Compile Include="Weapons\Rifles\Minigun.cs" />
+    <Compile Include="Weapons\Rifles\MK20_SSR.cs" />
     <Compile Include="Weapons\Rifles\Musket.cs" />
     <Compile Include="Weapons\Rifles\PulseSniperRifle.cs" />
     <Compile Include="Weapons\Rifles\QuadLauncher.cs" />
